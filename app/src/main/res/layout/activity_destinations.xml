@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/destination_header_image"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/destinationbg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/destination_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logoo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/destination_notification_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/notif"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/destination_view"
+        android:layout_width="416dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination_header_image" />
+
+    <LinearLayout
+        android:id="@+id/destination_buttonLayout"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="-10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination_header_image">
+
+        <Button
+            android:id="@+id/packagebtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:textColor="#FEAD5F"
+            android:background="@drawable/orangebttn"
+            android:text="Packages" />
+
+        <Button
+            android:id="@+id/carsbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:textColor="#FEAD5F"
+            android:background="@drawable/orangebttn"
+            android:layout_weight="1"
+            android:text="Cars" />
+
+        <Button
+            android:id="@+id/destinationbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/booknowbttn"
+            android:text="Destination" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/destination_scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/destination_buttonLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/destination_bottomNavigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des1" />
+
+                <TextView
+                    android:id="@+id/titleText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="10,000 Roses"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location: Day-as Barangay Rd, Cordova, Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/SubText1"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text=" The 10,000 Roses Cafe and More in Cebu is a mesmerizing attraction that enchants visitors with its ethereal beauty and romantic ambiance. Nestled along the coast of Cordova, this unique destination captivates the imagination with its expansive field of artificial LED roses that come alive in a dazzling display of light and color after dusk."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des2" />
+
+                <TextView
+                    android:id="@+id/titleText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Kawasan Falls"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location:8R7G+835, Antuwanga, Cebu City, 6000 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/SubText2"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text=" Prepare to be mesmerized by the ethereal beauty of Kawasan Falls, where cascading turquoise waters tumble through lush greenery. Escape the ordinary and embark on an adventure through pristine jungles to discover this oasis of serenity, offering a refreshing plunge into nature's embrace."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des3" />
+
+                <TextView
+                    android:id="@+id/titleText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Temple of Leah"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location: Cebu Transcentral Hwy, Cebu City, 6000 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/SubText3"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text=" Uncover the timeless elegance of the Temple of Leah, a majestic monument inspired by ancient Roman architecture. Marvel at intricate sculptures, grandiose columns, and panoramic vistas that offer a glimpse into a bygone era of opulence and splendor."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des4" />
+
+                <TextView
+                    android:id="@+id/titleText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Magellan’s Cross Pavillion"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location:7WV2+CQG, P. Burgos St, Cebu City, 6000 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SubText4"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text=" The Magellan's Cross Pavilion offers a captivating glimpse into Cebu's rich history and cultural heritage, providing a serene sanctuary amidst the bustling streets of Cebu City. Nestled within a beautifully landscaped plaza, this iconic pavilion serves as a solemn tribute to the arrival of Christianity in the Philippines and the enduring legacy of Ferdinand Magellan's historic voyage."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des5" />
+
+                <TextView
+                    android:id="@+id/titleText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Oslob Whale Shark Watching"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location: F97H+9W, Natalio Bacalso Avenue, Oslob, 6023 Cebu City"
+                    android:textColor="#FEAD5F"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SubText5"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Embark on an awe-inspiring journey to Oslob, where you can come face-to-face with the majestic whale sharks. Immerse yourself in the crystal-clear waters and witness these gentle giants glide gracefully beneath you, creating unforgettable memories that will last a lifetime.
+Az"
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des6" />
+
+                <TextView
+                    android:id="@+id/titleText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Cebu Taoist Temple"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location:8R7G+835, Antuwanga, Cebu City, 6000 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SubText6"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Whether you're a devout follower of Taoism, a curious traveler seeking to expand your horizons, or simply someone in search of inner peace and spiritual renewal, the Cebu Taoist Temple offers a sanctuary for the soul and a refuge from the chaos of modern life. Step into its hallowed halls, and let the wisdom of the ages wash over you, as you embark on a journey of self-discovery and enlightenment amidst the timeless beauty of this sacred site."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des7" />
+
+                <TextView
+                    android:id="@+id/titleText7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Basilica Minore del Santo Niño"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location: Pilgrim’s Center, Osmeña Blvd, Cebu City, 6000 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SubText7"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="As the oldest Roman Catholic church in the Philippines, this iconic basilica holds great historical and religious significance. To make your visit more meaningful, attend a mass celebrated in the native language, and take part in the traditional Sinulog procession held annually in honor of the Santo Niño."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des8" />
+
+                <TextView
+                    android:id="@+id/titleText8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Cebu Safari and Adventure Park"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location: Barangay Corte, Toril, Carmen, 6005 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SubText8"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Embark on a wild expedition through Cebu Safari and Adventure Park, where thrilling encounters with exotic wildlife await at every turn. Journey through lush rainforests, expansive savannas, and immersive habitats to witness majestic creatures in their natural habitat."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <!-- ImageView as background -->
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/des9" />
+
+                <TextView
+                    android:id="@+id/titleText9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="100dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="The Simala Shrine"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addText9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="125dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Location: Barangay Corte, Toril, Carmen, 6005 Cebu"
+                    android:textColor="#FEAD5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SubText9"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginTop="150dp"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:text="Whether you're a devout follower of Taoism, a curious traveler seeking to expand your horizons, or simply someone in search of inner peace and spiritual renewal, the Cebu Taoist Temple offers a sanctuary for the soul and a refuge from the chaos of modern life. Step into its hallowed halls, and let the wisdom of the ages wash over you, as you embark on a journey of self-discovery and enlightenment amidst the timeless beauty of this sacred site."
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/destination_bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="800dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/desButton1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/homeicon" />
+
+            <ImageButton
+                android:id="@+id/desButton2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerInside"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/checkout" />
+
+            <ImageButton
+                android:id="@+id/desButton3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/usericon" />
+
+            <ImageButton
+                android:id="@+id/desButton4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/setting" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
